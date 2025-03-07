@@ -1,0 +1,53 @@
+:root {
+    --nsYellow: #ffc917;
+}
+
+body {
+    font-family: "nssans";
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  /* padding: 0; */
+  /* margin: 0; */
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, h2, a, p, form, button, input::placeholder {
+  font-family: 'nssans', sans-serif;
+  font-style: normal;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  
+
+header:nth-of-type(1) {
+    background-color: red;
+    color: white;
+    font-size: .7em;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+header:nth-of-type(2) {
+    background: var(--nsYellow);
+}
+
+

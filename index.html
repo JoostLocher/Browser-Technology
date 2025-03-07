@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS Belasting</title>
+    <link href="styles/algemeen.css" rel="stylesheet">
+    <link href="styles/font.css" rel="stylesheet">
+    <link href="styles/form.css" rel="stylesheet"
+</head>
+
+<body>
+    <header><p>Dit is een school project!!!</p></header>
+    <header>
+        <h1>Erfbelasting formulier</h1>
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="51" height="20"
+            viewBox="0 0 51 20">
+            <path fill="#003082"
+                d="M22.358,9.6A5.543,5.543,0,0,0,18.448,8H7.62l4.01-4H21.757a1.612,1.612,0,0,1,1.1.5l5.915,5.9a5.543,5.543,0,0,0,3.91,1.6H43.513L39.5,16H29.376a1.612,1.612,0,0,1-1.1-.5Zm3.108,8.7a6.1,6.1,0,0,0,3.91,1.7h11.73L51.133,10,41.107,0H35.492l8.021,8H32.685a2.11,2.11,0,0,1-1.1-.4L25.667,1.7A6.1,6.1,0,0,0,21.757,0H10.026L0,10,10.026,20h5.615L7.62,12H18.448a2.109,2.109,0,0,1,1.1.4Z">
+            </path>
+        </svg>
+    </header>
+    <main>
+
+        <!------------ Form 1 ------------>
+
+        <form>
+            <fieldset>
+                <legend>1 Gegevens van de overledene</legend>
+
+                <!-------- 1a -------->
+                <fieldset>
+                    <legend>1a</legend>
+                    <label>Voorletter(s)
+                        <input type="text" name="naam" required>
+                    </label>
+                    <label>tussenvoegsel(s)
+                        <input type="text" name="naam" required>
+                    </label>
+                    <label>achternaam
+                        <input type="text" name="naam" required>
+                    </label>
+
+                    <label>Burgerservicenummer
+                        <input type="text" name="bsn" required>
+                    </label>
+                    <label>Overlijdensdatum
+                        <input type="date" name="overlijdensdatum" max="2025-03-05" required>
+                    </label>
+                </fieldset>
+
+                <!-------- 1b -------->
+                <fieldset>
+                    <legend>1b</legend>
+                    <fieldset>
+                        <legend>Was de overledene getrouwd of had de overledene een geregistreerd partner op het moment
+                            van overlijden?</legend>
+                        <label>
+                            <input type="radio" id="nee-1b" name="1b1">Nee <small>Ga verder met vraag 1d</small>
+                        </label>
+                        <label>
+                            <input type="radio" name="1b1">Ja
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse
+                            of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
+                        <label>
+                            <input type="radio" name="1b2">Nee
+                        </label>
+                        <label>
+                            <input type="radio" name="1b2">Ja <small>Stuur een kopie van de akte mee met de
+                                aangifte.</small>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Hadden de overledene en diens partner een finaal
+                            verrekenbeding?</legend>
+                        <label>
+                            <input type="radio" name="1b3">Nee
+                        </label>
+                        <label>
+                            <input type="radio" name="1b3">Ja
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+                        <label>Dag
+                            <input type="text">
+                        </label>
+                        <label>Maand
+                            <input type="text">
+                        </label>
+                        <label>Jaar
+                            <input type="text">
+                        </label>
+                    </fieldset>
+
+                    <!-------- 1d -------->
+                    <fieldset>
+                        <legend>1d</legend>
+                    </fieldset>
+
+                </fieldset>
+
+            </fieldset>
+
+            <div class="button-container">
+                <button type="submit">Volgende pagina</button>
+            </div>
+
+        </form>
+
+        <!------------ Form 2 ------------>
+
+        <form>
+            <fieldset>
+                <legend>Gegevens gemachtigde</legend>
+
+                <!-------- 2a -------->
+                <fieldset>
+                    <legend>2a</legend>
+                    <small>Vul 1 van de 3 in: het burgerservicenummer of RSIN van de gemachtigde, het beconnummer van de
+                        adviseur of
+                        het protocolnummer van de notaris.</small>
+                    <label>Burgerservicenummer/ RSIN gemachtigde
+                        <input type="number">
+                    </label>
+                    <label>Beconnummer adviseur
+                        <input type="number">
+                    </label>
+                    <label>Protocolnummer notaris
+                        <input type="number">
+                    </label>
+                </fieldset>
+
+                <!-------- 2b -------->
+                <fieldset>
+                    <legend>2b</legend>
+                    <fieldset>
+                        <legend></legend>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Adres in Nederland</legend>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Adres in Buitenland</legend>
+                    </fieldset>
+
+                    <label> Telefoonnummer
+                        <input type="tel">
+                    </label>
+                    <label> E-mailadres
+                        <input type="email">
+                    </label>
+
+                </fieldset>
+
+            </fieldset>
+        </form>
+
+        <!------------ Form 3 ------------>
+
+        <form>
+            <fieldset>
+                <legend>3 Voor wie doet u aangifte?</legend>
+
+                <!-------- 3a -------->
+                <fieldset>
+                    <legend>3a</legend>
+                    <p>Heeft de overledene in het testament een executeur aangewezen om de erfenis af te
+                        handelen?
+                        Dan moet de executeur aangifte doen voor alle personen en/of instellingen die iets krijgen
+                        uit de nalatenschap (verkrijgers).</p>
+                    <small>Lees de toelichting bij vraag 3a.</small>
+                    <label>
+                        <input type="radio" name="3a">Ik ben executeur en doe aangifte voor alle personen en/of
+                        instellingen die
+                        iets krijgen uit de nalatenschap (verkrijgers). <small>Geef aan voor hoeveel verkrijgers u
+                            aangifte doet. Bent u zelf ook verkrijger? Tel uzelf dan ook mee.</small>
+                        <input type="number"><small>Ga naar vraag 3c.</small>
+                    </label>
+                    <p>Is er geen executeur aangewezen? Kruis dan aan welke situatie voor u geldt.</p>
+                    <label>
+                        <input type="radio" name="3a">Ik ben erfgenaam en ben gemachtigd om aangifte te doen voor
+                        meerdere
+                        personen en/of instellingen die iets krijgen uit de nalatenschap (verkrijgers).<small>Geef
+                            aan voor hoeveel verkrijgers u aangifte doet. Tel uzelf ook mee.</small>
+                        <input type="number">
+                    </label>
+                    <label>
+                        <input type="radio" name="3a">Ik ben erfgenaam en doe samen met andere erfgenamen
+                        aangifte.<small>Geef het aantal personen en/of instellingen aan die iets krijgen uit de
+                            nalatenschap
+                            (verkrijgers). Tel uzelf ook mee.</small>
+                        <input type="number">
+                    </label>
+                    <label>
+                        <input type="radio" name="3a">Ik ben erfgenaam en doe alleen aangifte voor mijzelf.
+                        <input type="number">
+                    </label>
+                    <label>
+                        <input type="radio" name="3a">Ik ben geen erfgenaam, maar ben gemachtigd om aangifte te
+                        doen.<small>Geef aan voor hoeveel verkrijgers u aangifte doet.</small>
+                        <input type="number">
+                    </label>
+                </fieldset>
+
+                <!-------- 3b -------->
+                <fieldset>
+                    <legend>3b</legend>
+                    <fieldset>
+                        <legend>Zijn er verkrijgers voor wie u geen aangifte doet?</legend>
+                        <label>
+                            <input type="radio" name="3b1">Nee <small>Ga naar vraag 3c</small>
+                        </label>
+                        <label>
+                            <input type="radio" name="3b1">Ja <small>Vul hieronder de gegevens in van de verkrijgers waarvoor u geen aangifte doet.
+                                Gaat het om een instelling? Vul dan de naam van de instelling in bij ‘achternaam’.
+                                Het invullen van een bsn is niet verplicht, maar wel handig voor ons.</small>
+                        </label>
+                    </fieldset>
+
+                    <!---- verkrijger(s) ---->
+                    <fieldset>
+                        <legend>Verkrijger 1</legend>
+                        <label>Burgerservicenummer/RSIN
+                            <input type="number">
+                        </label>
+                        <label>Voorletter(s)
+                            <input type="text">
+                        </label>
+                        <label>tussenvoegsel(s)
+                            <input type="text">
+                        </label>
+                        <label>achternaam
+                            <input type="text">
+                        </label>
+                        <fieldset>
+                            <legend>Krijgt deze verkrijger waarvoor u geen aangifte doet het hele vermogen?</legend>
+                            <label>
+                                <input type="radio" name="3bV11">Nee
+                            </label>
+                            <label>
+                                <input type="radio" name="3bV11">Ja
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Doet deze verkrijger een beroep op diens legitieme portie (wettelijke erfdeel)?</legend>
+                            <label>
+                                <input type="radio" name="3bV12">Nee
+                            </label>
+                            <label>
+                                <input type="radio" name="3bV12">Ja
+                            </label>
+                        </fieldset>
+                    </fieldset>
+                    
+                </fieldset>
+            </fieldset>
+        </form>
+
+    </main>
+</body>
+
+</html>
