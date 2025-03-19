@@ -8,8 +8,8 @@ Om de opdracht te starten, heb ik eerst de website van NS grondig bekeken en uit
 
 Daarnaast heb ik de fonts gedownload en direct in mijn website geïmplementeerd (toegevoegd aan .gitignore).
 
-Ook heb ik het aangifte erfbelasting-pdf doorgenomen en notities gemaakt van mogelijke relevante vragen voor deze opdracht, met de verschillende inputtypes. De eerste paar vragen heb ik alvast toegevoegd.
-<img src="/images/notes.png" width="100" height="200">
+Ook heb ik het aangifte erfbelasting-pdf doorgenomen en notities gemaakt van mogelijke relevante vragen voor deze opdracht, met de verschillende inputtypes. De eerste paar vragen heb ik alvast toegevoegd.<br>
+<img src="/images/notes.png" width="200" height="400">
 
 **Doel volgende week:**<br>
 - aantal vragen toevoegen
@@ -18,8 +18,8 @@ Ook heb ik het aangifte erfbelasting-pdf doorgenomen en notities gemaakt van mog
 ## Week 2
 
 **Voortgang:**<br>
-Deze week heb ik meer vragen toegevoegd met verschillende inputs met een waarbij deel van 1b display: none; krijgt wanneer er op nee wordt gedrukt. Verder heb ik een begin gemaakt aan de opmaak van het formulier.
-<img src="/images/week2.png" width="100" height="200">
+Deze week heb ik meer vragen toegevoegd met verschillende inputs met een waarbij deel van 1b display: none; krijgt wanneer er op nee wordt gedrukt. Verder heb ik een begin gemaakt aan de opmaak van het formulier.<br>
+<img src="/images/week2.png" width="200" height="400">
 
 
 **Doel volgende week:**<br>
@@ -30,8 +30,8 @@ Deze week heb ik meer vragen toegevoegd met verschillende inputs met een waarbij
 ## Week 3
 
 **Voortgang:**<br>
-Het meeste van het formulier deel 1 is de opmaak structuur af. Verder heb ik voor de eerste paar inputs data toegevoegd zoals placeholders, maxlength en patterns : <code><input type="text" class="date-input" id="od-maand" name="Overlijdensdatum maand" placeholder="mm" maxlength="2" pattern="^(0?[1-9]|1[0-2])$" required></code>
-<img src="/images/week3.png" width="100" height="200">
+Het meeste van het formulier deel 1 is de opmaak structuur af. Verder heb ik voor de eerste paar inputs data toegevoegd zoals placeholders, maxlength en patterns :<br><code>input type="text" class="date-input" id="od-maand" name="Overlijdensdatum maand" placeholder="mm" maxlength="2" pattern="^(0?[1-9]|1[0-2])$" required</code><br>
+<img src="/images/week3.png" width="200" height="400">
 
 
 **Doel volgende week:**<br>
