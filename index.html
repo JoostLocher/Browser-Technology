@@ -13,9 +13,6 @@
 
 <body>
     <header>
-        <p>Let op!!! Dit is een school project!!!</p>
-    </header>
-    <header>
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="51" height="20"
             viewBox="0 0 51 20">
             <path fill="#003082"
@@ -24,18 +21,13 @@
         </svg>
         <h1>Erfbelasting formulier</h1>
     </header>
+    <header>
+        <p>Let op!!! Dit is een school project!!!</p>
+    </header>
 
     <main>
 
         <form>
-
-            <aside>
-                <div>
-                    <a href="#form-1">1</a>
-                    <a href="#form-2">2</a>
-                    <a href="#form-3">3</a>
-                </div>
-            </aside>
 
             <!------------ Form 1 ------------>
 
@@ -46,44 +38,44 @@
                     <fieldset class="form-number one-a">
                         <legend>1a</legend>
                         <fieldset class="one-a-line-one">
-                            <span class="span-left"><legend>Naam</legend></span>
+                            <span class="span-left"><legend>Naam overledene</legend></span>
                             <div>
-                                <label for="voornaam">Voorletter(s)
-                                <input type="text" id="voornaam" name="Voornaam" maxlength="50"
-                                 pattern="^[A-Z]([. ]?[A-Z])*$" placeholder="bv. J.P.R" required>
+                                <label for="voorletters-overledene">Voorletter(s)
+                                <input type="text" id="voorletters-overledene" name="voorletters-overledene" minlength="1" maxlength="25"
+                                pattern="^[A-Za-zÀ-ÿ](\.|\s)?([A-Za-zÀ-ÿ](\.|\s)?)*$" placeholder="bv. J.P.R" required>
                             </label>
-                            <label for="tussenvoegsel">Tussenvoegsel(s)
-                                <input type="text" id="tussenvoegsel" name="Tussenvoegsel" maxlength="50"
-                                 placeholder="bv. van den">
+                            <label for="tussenvoegsel-overledene">Tussenvoegsel(s)
+                                <input type="text" id="tussenvoegsel-overledene" name="tussenvoegsel-overledene" pattern="^[A-Za-zÀ-ÿ\s-]+$"
+                                minlength="2" maxlength="25" placeholder="bv. van den">
                             </label>
-                            <label for="achternaam">Achternaam
-                                <input type="text" id="achternaam" name="Achternaam" maxlength="50"
-                                 placeholder="bv. Locher" required>
+                            <label for="achternaam-overledene">Achternaam
+                                <input type="text" id="achternaam-overledene" name="achternaam-overledene" pattern="^[A-Za-zÀ-ÿ\s'-]+$" minlength="2"
+                                maxlength="25" placeholder="bv. Locher" required>
                             </label>
                             </div>
                         </fieldset>
 
                         <fieldset class="one-a-line-two">
                             <span class="span-left"><legend>Burgerservicenummer</legend></span>
-                            <label for="ol-bsn">
-                                <input type="text" id="ol-bsn" name="BSN"
+                            <label for="bsn-overledene">
+                                <input type="text" id="bsn-overledene" name="bsn-overledene"
                                  placeholder="123456789" maxlength="9" pattern="[1-9][0-9]{8}" required>
                             </label>
                         </fieldset>
 
-                        <fieldset class="one-a-line-three">
+                        <fieldset class="one-a-line-three datum-groep">
                             <span class="span-left"><legend>Overlijdensdatum</legend></span>
                             <div>
-                                <label for="od-dag">Dag
-                                    <input type="text" class="date-input" id="od-dag" name="Overlijdensdatum dag"
+                                <label for="dag-overlijdensdatum">Dag
+                                    <input type="text" class="date-input" id="dag-overlijdensdatum" name="dag-overlijdensdatum"
                                      placeholder="dd" maxlength="2" pattern="^(0?[1-9]|[12][0-9]|3[01])$" required>
                                 </label>
-                                <label for="od-maand">Maand
-                                    <input type="text" class="date-input" id="od-maand" name="Overlijdensdatum maand"
+                                <label for="maand-overlijdensdatum">Maand
+                                    <input type="text" class="date-input" id="maand-overlijdensdatum" name="maand-overlijdensdatum"
                                     placeholder="mm" maxlength="2" pattern="^(0?[1-9]|1[0-2])$" required>
                                 </label>
-                                <label for="od-jaar">Jaar
-                                    <input type="text" class="date-input" id="od-jaar" name="Overlijdensdatum jaar"
+                                <label for="jaar-overlijdensdatum">Jaar
+                                    <input type="text" class="date-input" id="jaar-overlijdensdatum" name="jaar-overlijdensdatum"
                                     placeholder="jjjj" minlength="4" maxlength="4" pattern="^\d{4}$" required>
                                 </label>
                             </div>
@@ -94,231 +86,160 @@
                     <!-------- 1b -------->
                     <fieldset class="form-number one-b">
                         <legend>1b</legend>
+
                         <fieldset class="one-b-line-one">
                             <legend>Was de overledene getrouwd of had de overledene een geregistreerd partner op het
-                                moment
-                                van overlijden?</legend>
+                                moment van overlijden?</legend>
                             <div>
-                                <label>
-                                    <input type="radio" id="nee-1b" name="1b1">Nee <small>Ga verder met vraag 1d</small>
+                                <label for="nee-1b1">
+                                    <input type="radio" id="nee-1b1" name="1b1" value="nee-1b1" class="skip" checked> Nee <small>Ga verder met
+                                        vraag 1d</small>
                                 </label>
-                                <label>
-                                    <input type="radio" name="1b1">Ja
+                                <label for="ja-1b1">
+                                    <input type="radio" id="ja-1b1" name="1b1" value="ja-1b1"> Ja
                                 </label>
                             </div>
                         </fieldset>
 
-                        <fieldset class="one-b-line-two">
-                            <legend>Hadden de overledene en diens echtgenoot of geregistreerd partner huwelijkse
-                                of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
+                        <fieldset class="one-b-line-two skipped">
+                            <legend>
+                              Hadden zij huwelijkse of partnerschapsvoorwaarden vastgelegd in een notariële akte?
+                            </legend>
                             <div>
-                                <label>
-                                    <input type="radio" name="1b2">Nee
+                              <label for="nee-1b2">
+                                <input type="radio" id="nee-1b2" name="1b2" value="nee-1b2">
+                                Nee
+                              </label>
+                              <label for="ja-1b2">
+                                <input type="radio" id="ja-1b2" name="1b2" value="ja-1b2" class="expand">
+                                Ja <small>Stuur een kopie van de akte mee.</small>
+                                <div class="upload-button">
+                                  <label for="akte-upload-1b2">Kies bestand
+                                    <input type="file" id="akte-upload-1b2" name="akte-upload" accept="image/*,.pdf">
+                                  </label>
+                                </div>
+                              </label>
+                            </div>
+                          </fieldset>
+
+                        <fieldset class="one-b-line-three skipped">
+                            <legend>Hadden zij een finaal verrekenbeding?</legend>
+                            <div>
+                                <label for="nee-1b3">
+                                    <input type="radio" id="nee-1b3" name="1b3" value="nee-1b3"> Nee
                                 </label>
-                                <label>
-                                    <input type="radio" name="1b2">Ja <small>Stuur een kopie van de akte mee met de
-                                        aangifte.</small>
+                                <label for="ja-1b3">
+                                    <input type="radio" id="ja-1b3" name="1b3" value="ja-1b3"> Ja
                                 </label>
                             </div>
                         </fieldset>
 
-                        <fieldset class="one-b-line-three">
-                            <legend>Hadden de overledene en diens partner een finaal
-                                verrekenbeding?</legend>
-                            <div>
-                                <label>
-                                    <input type="radio" name="1b3">Nee
-                                </label>
-                                <label>
-                                    <input type="radio" name="1b3">Ja
-                                </label>
-                            </div>
-                        </fieldset>
-
-                        <fieldset class="one-b-line-four">
-                            <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+                        <fieldset class="one-b-line-four datum-groep skipped">
+                            <legend>Datum van de voorwaarden</legend>
                             <div>
                                 <label for="hp-dag">Dag
-                                    <input type="text" class="date-input" id="hp-dag" name="Overlijdensdatum dag"
-                                     placeholder="dd" maxlength="2" pattern="^(0?[1-9]|[12][0-9]|3[01])$" required>
+                                    <input type="text" class="date-input" id="hp-dag" name="hop-dag" placeholder="dd"
+                                        maxlength="2" pattern="^(0?[1-9]|[12][0-9]|3[01])$">
                                 </label>
                                 <label for="hp-maand">Maand
-                                    <input type="text" class="date-input" id="hp-maand" name="Overlijdensdatum maand"
-                                    placeholder="mm" maxlength="2" pattern="^(0?[1-9]|1[0-2])$" required>
+                                    <input type="text" class="date-input" id="hp-maand" name="hop-maand"
+                                        placeholder="mm" maxlength="2" pattern="^(0?[1-9]|1[0-2])$">
                                 </label>
                                 <label for="hp-jaar">Jaar
-                                    <input type="text" class="date-input" id="hp-jaar" name="Overlijdensdatum jaar"
-                                    placeholder="jjjj" minlength="4" maxlength="4" pattern="^\d{4}$" required>
+                                    <input type="text" class="date-input" id="hp-jaar" name="hop-jaar"
+                                        placeholder="jjjj" maxlength="4" pattern="^\d{4}$">
                                 </label>
                             </div>
                         </fieldset>
-
                     </fieldset>
+                      
 
                     <!-------- 1d -------->
                     <fieldset class="form-number one-d">
                         <legend>1d</legend>
-                    </fieldset>
 
-                    <div class="button-cont">
-                        <a class="volgende" href="#form-2">Volgende pagina</a>
-                    </div>
-
-            </fieldset>
-
-            <!------------ Form 2 ------------>
-
-            <fieldset id="form-2">
-                    <legend>2 Gegevens gemachtigde</legend>
-
-                    <!-------- 2a -------->
-                    <fieldset>
-                        <legend>2a</legend>
-                        <small>Vul 1 van de 3 in: het burgerservicenummer of RSIN van de gemachtigde, het beconnummer
-                            van de
-                            adviseur of
-                            het protocolnummer van de notaris.</small>
-                        <label>Burgerservicenummer/ RSIN gemachtigde
-                            <input type="number">
-                        </label>
-                        <label>Beconnummer adviseur
-                            <input type="number">
-                        </label>
-                        <label>Protocolnummer notaris
-                            <input type="number">
-                        </label>
-                    </fieldset>
-
-                    <!-------- 2b -------->
-                    <fieldset>
-                        <legend>2b</legend>
-                        <fieldset>
-                            <legend></legend>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Adres in Nederland</legend>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Adres in Buitenland</legend>
-                        </fieldset>
-
-                        <label> Telefoonnummer
-                            <input type="tel">
-                        </label>
-                        <label> E-mailadres
-                            <input type="email">
-                        </label>
-
-                    </fieldset>
-
-            </fieldset>
-
-            <!------------ Form 3 ------------>
-
-            <fieldset id="form-3">
-                    <legend>3 Voor wie doet u aangifte?</legend>
-
-                    <!-------- 3a -------->
-                    <fieldset>
-                        <legend>3a</legend>
-                        <p>Heeft de overledene in het testament een executeur aangewezen om de erfenis af te
-                            handelen?
-                            Dan moet de executeur aangifte doen voor alle personen en/of instellingen die iets krijgen
-                            uit de nalatenschap (verkrijgers).</p>
-                        <small>Lees de toelichting bij vraag 3a.</small>
-                        <label>
-                            <input type="radio" name="3a">Ik ben executeur en doe aangifte voor alle personen en/of
-                            instellingen die
-                            iets krijgen uit de nalatenschap (verkrijgers). <small>Geef aan voor hoeveel verkrijgers u
-                                aangifte doet. Bent u zelf ook verkrijger? Tel uzelf dan ook mee.</small>
-                            <input type="number"><small>Ga naar vraag 3c.</small>
-                        </label>
-                        <p>Is er geen executeur aangewezen? Kruis dan aan welke situatie voor u geldt.</p>
-                        <label>
-                            <input type="radio" name="3a">Ik ben erfgenaam en ben gemachtigd om aangifte te doen voor
-                            meerdere
-                            personen en/of instellingen die iets krijgen uit de nalatenschap (verkrijgers).<small>Geef
-                                aan voor hoeveel verkrijgers u aangifte doet. Tel uzelf ook mee.</small>
-                            <input type="number">
-                        </label>
-                        <label>
-                            <input type="radio" name="3a">Ik ben erfgenaam en doe samen met andere erfgenamen
-                            aangifte.<small>Geef het aantal personen en/of instellingen aan die iets krijgen uit de
-                                nalatenschap
-                                (verkrijgers). Tel uzelf ook mee.</small>
-                            <input type="number">
-                        </label>
-                        <label>
-                            <input type="radio" name="3a">Ik ben erfgenaam en doe alleen aangifte voor mijzelf.
-                            <input type="number">
-                        </label>
-                        <label>
-                            <input type="radio" name="3a">Ik ben geen erfgenaam, maar ben gemachtigd om aangifte te
-                            doen.<small>Geef aan voor hoeveel verkrijgers u aangifte doet.</small>
-                            <input type="number">
-                        </label>
-                    </fieldset>
-
-                    <!-------- 3b -------->
-                    <fieldset>
-                        <legend>3b</legend>
-                        <fieldset>
-                            <legend>Zijn er verkrijgers voor wie u geen aangifte doet?</legend>
-                            <label>
-                                <input type="radio" name="3b1">Nee <small>Ga naar vraag 3c</small>
-                            </label>
-                            <label>
-                                <input type="radio" name="3b1">Ja <small>Vul hieronder de gegevens in van de verkrijgers
-                                    waarvoor u geen aangifte doet.
-                                    Gaat het om een instelling? Vul dan de naam van de instelling in bij ‘achternaam’.
-                                    Het invullen van een bsn is niet verplicht, maar wel handig voor ons.</small>
-                            </label>
-                        </fieldset>
-
-                        <!---- verkrijger(s) ---->
-                        <fieldset>
-                            <legend>Verkrijger 1</legend>
-                            <label>Burgerservicenummer/RSIN
-                                <input type="number">
-                            </label>
-                            <label>Voorletter(s)
-                                <input type="text">
-                            </label>
-                            <label>tussenvoegsel(s)
-                                <input type="text">
-                            </label>
-                            <label>achternaam
-                                <input type="text">
-                            </label>
-                            <fieldset>
-                                <legend>Krijgt deze verkrijger waarvoor u geen aangifte doet het hele vermogen?</legend>
-                                <label>
-                                    <input type="radio" name="3bV11">Nee
+                        <fieldset class="one-d-line-one">
+                            <legend>Had de overledene een testament?</legend>
+                            <div>
+                                <label for="nee-1d1">
+                                    <input class="skip" type="radio" id="nee-1d1" name="1d1" value="nee-1d1" checked> Nee <small>Ga verder
+                                        met vraag 2</small>
                                 </label>
-                                <label>
-                                    <input type="radio" name="3bV11">Ja
+                                <label for="ja-1d1">
+                                    <input type="radio" id="ja-1d1" name="1d1" value="ja-1d1"> Ja
                                 </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="one-d-line-two skipped">
+                            <legend>Gegevens van de notaris</legend>
+
+                                <label for="protocolnummer-notaris" class="one-d-line-three">Protocolnummer notaris
+                                    <input type="text" id="protocolnummer-notaris" name="protocolnummer-notaris"
+                                        placeholder="12345-2023" pattern="^\d{1,5}-\d{4}$" minlength="6" maxlength="10">
+                                </label>
+
+                            <fieldset class="one-d-line-four">
+                                <span class="span-left"><legend>Naam notaris</legend></span>
+                                <div class="notaris-naam">
+                                    <label for="voorletters-notaris">Voorletter(s)
+                                        <input type="text" id="voorletters-notaris" name="voorletters-notaris" minlength="1" maxlength="25"
+                                        pattern="^[A-Za-zÀ-ÿ](\.|\s)?([A-Za-zÀ-ÿ](\.|\s)?)*$" placeholder="bv. J.P.R">
+                                    </label>
+                                    <label for="tussenvoegsel-notaris">Tussenvoegsel(s)
+                                        <input type="text" id="tussenvoegsel-notaris" name="tussenvoegsel-notaris" pattern="^[A-Za-zÀ-ÿ\s-]+$"
+                                        minlength="2" maxlength="25" placeholder="bv. van den">
+                                    </label>
+                                    <label for="achternaam-notaris">Achternaam
+                                        <input type="text" id="achternaam-notaris" name="achternaam-notaris" pattern="^[A-Za-zÀ-ÿ\s'-]+$" minlength="2"
+                                        maxlength="25" placeholder="bv. Locher">
+                                    </label>
+                                </div>
                             </fieldset>
-                            <fieldset>
-                                <legend>Doet deze verkrijger een beroep op diens legitieme portie (wettelijke erfdeel)?
-                                </legend>
-                                <label>
-                                    <input type="radio" name="3bV12">Nee
+                            
+                                <label for="vestigingsplaats-notaris" class="one-d-line-five">Vestigingsplaats
+                                    <input type="text" placeholder="bv. Amsterdam" pattern="^[A-Za-zÀ-ÿ\s'-]+$"
+                                        minlength="2" maxlength="50" id="vestigingsplaats-notaris" name="vestigingsplaats-notaris">
                                 </label>
-                                <label>
-                                    <input type="radio" name="3bV12">Ja
-                                </label>
+                            
+                            <fieldset class="one-d-line-six datum-groep">
+                                <span class="span-left"><legend>Datum van testament of van laatste wijziging</legend></span>
+                                <div>
+                                    <label for="dag-testament">Dag
+                                        <input type="text" class="date-input" id="dag-testament" name="dag-testament"
+                                            placeholder="dd" maxlength="2" pattern="^(0?[1-9]|[12][0-9]|3[01])$">
+                                    </label>
+                                    <label for="maand-testament">Maand
+                                        <input type="text" class="date-input" id="maand-testament"
+                                            name="maand-testament" placeholder="mm" maxlength="2"
+                                            pattern="^(0?[1-9]|1[0-2])$">
+                                    </label>
+                                    <label for="jaar-testament">Jaar
+                                        <input type="text" class="date-input" id="jaar-testament" name="jaar-testament"
+                                            placeholder="jjjj" maxlength="4" pattern="^\d{4}$">
+                                    </label>
+                                </div>
                             </fieldset>
+                            
                         </fieldset>
 
                     </fieldset>
+                    
             </fieldset>
+
+            <div class="button-cont">
+                <button type="submit" class="volgende">Verstuur formulier</button>
+            </div>
+
         </form>
 
     </main>
 
+    <footer>
+        <p>@Joost Locher</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

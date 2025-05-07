@@ -62,17 +62,24 @@ body {
   font-size: var(--size-text);
   background-color: var(--ns-grey-90);
   width: 100dvw;
+  overflow-x: clip;
 }
 
 main {
   padding: 1em 0;
-
+  
 }
 
+footer {
+  height: 3em;
+  width: 100vw;
+  background-color: var(--ns-grey-80);
 
-h1 {
-  font-size: var(--size-l);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 a {
   text-decoration: none;
@@ -131,6 +138,7 @@ input[type="number"], input[type="date"] {
   border: 1px solid var(--ns-grey-80);
   border-radius: 3px;
   padding: .5em;
+  width: clamp(1em, 100%, 15em);
 }
 
 
@@ -149,32 +157,71 @@ input[type="radio"] {
 }
 
 header {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
 
   &:nth-of-type(1) {
+    background-color: var(--ns-yellow);
+    padding: 1em 2.75em;
+
+    h1 {
+      font-size: var(--size-s);
+    }
+  }
+
+  &:nth-of-type(2) {
     background-color: var(--ns-red);
-    color: white;
+    color: var(--ns-white);
     font-size: .6em;
     font-weight: 700;
     padding: 0;
     margin: 0;
+    height: 4em;
   }
   
-  &:nth-of-type(2) {
-    background-color: var(--ns-yellow);
-    padding: 1em;
-    position: relative;
+}
 
-    svg {
-      position: absolute;
-      left: 1em;
-    }
+*:disabled {
+  opacity: .3 !important;
+  filter: saturate(0) !important;
+  cursor: default !important;
+  translate: 0 0 !important;
+}
+
+
+.disabled label,
+.disabled legend,
+.disabled p {
+  opacity: 0.3 !important;
+  filter: saturate(0) !important;
+  cursor: default !important;
+}
+
+
+/* validatie */
+
+label:has(input[type=text]:not(:placeholder-shown)) {
+  
+  input {
+    border-bottom: 3px solid var(--ns-green);
   }
 
+}
+
+
+label:has(input[type=text]:not(:placeholder-shown):invalid ) {
+  
+  input {
+    border-bottom: 3px solid var(--ns-red);
+  }
+
+}
+
+input.invalid-input {
+  border: 2px solid var(--ns-red) !important;
+  background-color: #ffe6e6;
 }
 
 
